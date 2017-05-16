@@ -1,0 +1,61 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-code-push": {
+            "PACKAGE_NAME": "io.cordova.myapp796468"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "io.cordova.myapp796468"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "io.cordova.myapp796468"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "io.cordova.myapp796468"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "io.cordova.myapp796468"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "io.cordova.myapp796468"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "io.cordova.myapp796468"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "io.cordova.myapp796468"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "io.cordova.myapp796468"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "io.cordova.myapp796468"
+        },
+        "cordova-plugin-zip": {
+            "PACKAGE_NAME": "io.cordova.myapp796468"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "io.cordova.myapp796468"
+        }
+    },
+    "dependent_plugins": {
+        "code-push": {
+            "PACKAGE_NAME": "io.cordova.myapp796468"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "io.cordova.myapp796468"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "io.cordova.myapp796468"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "io.cordova.myapp796468"
+        }
+    }
+}

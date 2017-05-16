@@ -1,0 +1,12 @@
+﻿<ion-view view-title="Nearest Cafe" cache-view="false">
+    <ion-content overflow-scroll="true" ng-controller="CafeInfoCtrl">
+        <div class="list">
+            <label class="item">
+                <img style="float:left;max-height: 100%;max-width: 100%;position:relative;"
+                     ng-src="{{CafeInfo.restaurant.featured_image}}" />
+                <br/>                
+            </label>
+            <h3>{{CafeInfo.restaurant.name}}</h3>
+        </div>
+</ion-content>
+</ion-view>

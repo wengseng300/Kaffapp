@@ -1,0 +1,81 @@
+﻿
+<ion-view view-title="Nearest Cafe" ng-init="GetNearCafe()" cache-view="false">
+    <ion-content overflow-scroll="true" ng-controller="NearCafeCtrl">
+        <ion-header-bar>
+            Search bar
+        </ion-header-bar>
+        <div class="divDivider"></div>
+        <ion-list style="padding-top: 20px;">
+            <ion-item ng-click="DisplayCafeInfo(item.restaurant.id)" ng-repeat="item in items | orderBy: 'restaurant.distance'">                
+                <div class="dvCafeThumb">
+                    <img style="float:left;max-height: 100%;max-width: 100%;position:relative;"
+                         ng-src="{{item.restaurant.thumb}} " />
+                    <div>
+                        <span class="textCafeName">{{item.restaurant.name}}</span>
+                        <!--<span class="textCuisine">{{item.restaurant.cuisines}}</span>-->
+                    </div>                    
+                </div>
+                <div class="divDivider"></div>
+                <div class="dvCafeBasicDisplayInfo">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td><span style="float: left" ng-show="{{UserPreferDisplayData.ShowCuisine}}">{{item.restaurant.cuisines}}</span></td>
+                            <td><span style="float: right" ng-show="{{UserPreferDisplayData.ShowCost}}">{{item.restaurant.distanceDisplay}}</span></td>
+                        </tr>
+                        <tr>
+                            <td><span style="float: left" ng-show="{{UserPreferDisplayData.ShowLocation}}">{{item.restaurant.location.locality}}</span></td>
+                            <td><span style="float: right" ng-show="{{UserPreferDisplayData.ShowMenuAvailable}}">Menu</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </ion-item>
+        </ion-list>        
+        
+        <!--on-infinite="GetMoreNearCafe()" ng-if="!NoMoreNearCafe"-->
+        <ion-infinite-scroll on-infinite="GetMoreNearCafe()" ng-if="!NoMoreNearCafe"
+            icon="ion-loading-c" distance="1%">
+        </ion-infinite-scroll>
+
+        <!--http://arielfaur.github.io/ionic-pullup/index.v1.html-->
+        <!--<ion-pull-up-footer class="bar-energized" on-expand="footerExpand()" on-collapse="footerCollapse()" state="footerState">
+            <ion-pull-up-bar>
+                <h1 class="title" ion-pull-up-trigger>Tap here</h1>
+                <button class="button icon ion-gear-a"></button>
+            </ion-pull-up-bar>
+        </ion-pull-up-footer>-->
+        
+    </ion-content>
+    <ion-pull-up-footer>
+        <div class="title" ion-pull-up-trigger>
+            <span style="float: left; position: relative;">(Location)</span>
+            <span style="float: right; position: relative;">Arrange: Cost</span>
+        </div>
+        <ion-pull-up-handle width="120" height="15" icon-expand="ion-chevron-up" icon-collapse="ion-chevron-down" style="border-radius: 5px 5px 0 0; border-top: 1px solid black;">
+        </ion-pull-up-handle>
+        <ion-pull-up-content scroll="true">
+            <div class="list has-header padding">
+                <h3>Display Setting</h3>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Budget</span>
+                    <input type="text" placeholder="Budget">
+                </label>
+                <label class="item item-input item-select">                    
+                    <select class="select select-ios ng-untouched ng-pristine ng-valid" tappable>
+                        <option>Bukit Bintang</option>
+                        <option>KLCC</option>
+                    </select>
+                </label>
+                
+            </div>
+            <div class="list content has-header padding">
+                <h3>Arrange</h3>
+                <label class="item item-input item-select">                    
+                    <select class="select select-ios ng-untouched ng-pristine ng-valid" tappable>
+                        <option>Most Expensive</option>
+                        <option>Cheapest</option>
+                    </select>
+                </label>
+            </div>
+</ion-pull-up-content>
+    </ion-pull-up-footer>
+</ion-view>

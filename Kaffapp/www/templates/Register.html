@@ -1,0 +1,37 @@
+﻿<ion-view view-title="Mewple Registration"  cache-view="false">
+    <ion-header-bar>
+        <h1 class="title">Register</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <form>
+            <div class="list" ng-controller="RegisterCtrl">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Username</span>
+                    <input type="text" placeholder="E-mail" ng-model="registerData.email">
+                </label>
+                <div class="item item-input item-icon-right item-floating-label">
+                    <span class="input-label">Password</span>
+                    <input id="txtPassword" type="password" placeholder="Password" 
+                           ng-model="registerData.password">
+                    <span id="icnDisplayPw" ng-click="ToggleDisplayPwMode()" class="icon icon ion-eye"></span>
+                </div>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Display Name</span>
+                    <input type="text" placeholder="Display Name" ng-model="registerData.displayname">
+                </label>
+                <label class="item">
+                    <button class="button button-block button-royal" ng-click="RegisterMewple()">Make me a Mewple!</button>
+                </label>
+                <label class="item">
+                    <button class="button button-block button-calm" ng-click="BackLoginPage()">Try to Log in</button>
+                </label>
+                <label class="item">
+                    <button class="button button-block button-balanced" ng-click="modal.show()">Continue as Guest</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

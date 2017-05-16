@@ -1,0 +1,68 @@
+/* Empty. Add your own CSS if you like */
+
+/* Hide scroll bar 
+.scroll-bar-indicator
+{
+	display: none !important;
+}*/
+
+/* Hide scroll bar */
+body {    
+    /*background: url('../../img/pbody.png') top repeat-y !important;*/
+}
+#dashboard-banner-div {
+    /*background: #a44723 url('img/gallery.jpg') bottom no-repeat !important;*/
+    margin-bottom: 15px !important;
+}
+
+/* Registration Page */
+#icnDisplayPw {
+    font-size: 25px;
+    color: inherit;
+    padding-top: 25px;
+}
+
+#icnDisplayPw .active {
+    color: #4F8EF7 !important;
+    font-size:50px;
+}
+
+.ion-eye .active{
+    color: #4F8EF7 !important;
+}
+
+
+.dvCafeThumb {
+    max-height: 60%;
+    max-width: 100%;
+    padding-top: 0 !important;
+}
+.textCafeName {
+    left: 4.5%;
+    position:absolute;
+    text-align:left;
+    width: 90.8%;
+    background: rgba(0, 0, 0, 0.6);
+    font-size: 125%;
+    color: #fff;
+text-shadow: #fff 0 0 10px;
+padding: 10px 20px 10px 20px;
+}
+.textCuisine {
+    left: 10%;
+    position:absolute;
+    text-align:left;
+    top: 70%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 105%;
+}
+.divDivider {
+    clear: both;
+    padding-bottom: 5px;
+}
+.ng-hide:not(.ng-hide-animate) {
+    display: block !important;
+    position: relative;
+}

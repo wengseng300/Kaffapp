@@ -1,0 +1,75 @@
+<!--<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Login</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="doLogin()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" ng-model="loginData.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="loginData.password">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Log in</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>-->
+
+<ion-view view-title="Login" hide-nav-bar="true" cache-view="false">
+    <ion-header-bar>
+        <h1 class="title">Login</h1>
+        <div class="buttons">
+            
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <form>
+            <div class="list" ng-init="RedirectRegisteredMewple" ng-controller="LoginCtrl">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Username</span>
+                    <input type="text" placeholder="Username" ng-model="loginData.username">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Password</span>
+                    <input type="password" placeholder="Password" ng-model="loginData.password">
+                </label>
+                <label class="item">
+                    <button class="button button-block button-calm" ng-click="doLogin()">Log in</button>
+                </label>
+                <label class="item">
+                    <button class="button button-block button-positive" onclick="alert('Fired');">Facebook Log in</button>
+                </label>
+                <label class="item">
+                    <button class="button button-block button-royal" type="submit" ng-click="Registration()">Register as Mewple</button>                    
+                </label>
+                <label class="item">
+                    <button class="button button-block button-balanced" type="submit" ng-click="modal.show()">Guest</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>
+
+<script id="guestlogin.html" type="text/ng-template">
+    <div class="modal">
+        <header class="bar bar-header bar-positive">
+            <h1 class="title">Title 1</h1>
+            <div class="button button-clear" ng-click="modal.hide()"><span class="icon ion-close"></span></div>
+        </header>
+        <content has-header="true" padding="true">
+            <p>This is a modal</p>
+        </content>
+        <footer>
+            <button id="btnGuestLogin" class="button button-block button-balanced" type="submit" ng-click="GuestLogin()">Proceed</button>
+        </footer>
+    </div>
+</script>
